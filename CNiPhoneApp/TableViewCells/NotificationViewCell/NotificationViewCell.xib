@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationViewCell" rowHeight="66" id="KGk-i7-Jjw" customClass="NotificationViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="270" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="270" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P93-aE-5KQ" userLabel="Avatar">
+                        <rect key="frame" x="8" y="8" width="50" height="50"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="hSV-Xn-kG2"/>
+                            <constraint firstAttribute="width" constant="50" id="ie0-ma-gWX"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="196" translatesAutoresizingMaskIntoConstraints="NO" id="7NN-Xf-Ikc" userLabel="Text">
+                        <rect key="frame" x="66" y="8" width="196" height="15"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="196" id="Sky-to-hDt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="P93-aE-5KQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="5jJ-44-8uO"/>
+                    <constraint firstItem="P93-aE-5KQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="OOf-hn-hxF"/>
+                    <constraint firstItem="7NN-Xf-Ikc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="P2K-Tr-Kit"/>
+                    <constraint firstItem="7NN-Xf-Ikc" firstAttribute="leading" secondItem="P93-aE-5KQ" secondAttribute="trailing" constant="8" id="UqW-Lw-nyK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="notificationAvatarView" destination="P93-aE-5KQ" id="2oH-4d-XyR"/>
+                <outlet property="notificationTextLabel" destination="7NN-Xf-Ikc" id="EyF-zy-XId"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

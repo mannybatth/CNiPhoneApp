@@ -1,0 +1,11 @@
+//
+//  LeftSideBarViewController.h
+//  CNApp
+//
+//  Created by Manpreet Singh on 6/28/13.
+//  Copyright (c) 2013 Manpreet Singh. All rights reserved.
+//
+
+@interface LeftSideBarViewController : UIViewController
+
+@end

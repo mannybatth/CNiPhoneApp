@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePostViewController">
+            <connections>
+                <outlet property="cameraBtn" destination="IM1-LG-WGn" id="nkl-7q-b75"/>
+                <outlet property="masterScrollView" destination="b5i-wd-VIX" id="uXO-UI-KXf"/>
+                <outlet property="photosBtn" destination="bMs-Kt-OvY" id="PSu-43-C6l"/>
+                <outlet property="postAttachmentScrollView" destination="5Wo-HT-fgc" id="egX-nx-sXx"/>
+                <outlet property="postAttachmentScrollViewHeight" destination="EkA-Fp-UOa" id="MTm-aE-4ll"/>
+                <outlet property="postContentTextView" destination="BpY-47-Qot" id="LG1-q3-zhz"/>
+                <outlet property="postContentTextViewHeight" destination="PeH-3D-7do" id="dax-0Q-Dzt"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="visibleToBtn" destination="tVJ-eQ-pQ2" id="pT7-bO-LRC"/>
+                <outlet property="visibleToBtnContainer" destination="6ah-ZT-9GE" id="YDS-Da-Vdl"/>
+                <outlet property="visibleToIcon" destination="N36-tt-hdC" id="hoL-03-xxb"/>
+                <outlet property="visibleToTextLabel" destination="Rtc-IJ-dav" id="sJv-6e-Ifr"/>
+                <outlet property="youtubeBtn" destination="SEt-ug-dwi" id="Bhe-WF-mK7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5i-wd-VIX">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ah-ZT-9GE" userLabel="VisibleBtnContainer">
+                            <rect key="frame" x="10" y="10" width="300" height="42"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N36-tt-hdC" userLabel="Icon">
+                                    <rect key="frame" x="7" y="5" width="32" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Public" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtc-IJ-dav" userLabel="Public">
+                                    <rect key="frame" x="46" y="12" width="245" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="DSj-ur-tfh"/>
+                                <constraint firstAttribute="height" constant="42" id="Dxg-6k-Bcg"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVJ-eQ-pQ2" userLabel="VisibleToBtn">
+                            <rect key="frame" x="10" y="10" width="300" height="42"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="9Og-BZ-gOK"/>
+                                <constraint firstAttribute="width" constant="300" id="A4Z-Me-O2X"/>
+                            </constraints>
+                            <inset key="titleEdgeInsets" minX="20" minY="3" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="3" maxX="0.0" maxY="3"/>
+                            <connections>
+                                <action selector="onVisibleToBtnClick:" destination="-1" eventType="touchUpInside" id="F1Z-vb-j9h"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BpY-47-Qot" userLabel="ContentTextView" customClass="HPGrowingTextView">
+                            <rect key="frame" x="10" y="59" width="300" height="150"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="NPV-qU-w9O"/>
+                                <constraint firstAttribute="height" constant="150" id="PeH-3D-7do"/>
+                            </constraints>
+                        </view>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wo-HT-fgc" userLabel="AttachmentsScrollView">
+                            <rect key="frame" x="10" y="209" width="300" height="115"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="115" id="EkA-Fp-UOa"/>
+                                <constraint firstAttribute="width" constant="300" id="IeJ-iP-hmr"/>
+                            </constraints>
+                        </scrollView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBK-N2-JY6" userLabel="ButtonsView">
+                            <rect key="frame" x="10" y="331" width="300" height="88"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IM1-LG-WGn" userLabel="CameraBtn">
+                                    <rect key="frame" x="19" y="5" width="80" height="75"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="create_post_camera_btn_color">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onCameraBtnClick:" destination="-1" eventType="touchUpInside" id="O9K-X3-Hzv"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMs-Kt-OvY" userLabel="PhotosBtn">
+                                    <rect key="frame" x="107" y="5" width="80" height="75"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="create_post_photos_btn_color">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onPhotosBtnClick:" destination="-1" eventType="touchUpInside" id="AsT-kO-rSF"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEt-ug-dwi" userLabel="YoutubeBtn">
+                                    <rect key="frame" x="195" y="5" width="81" height="75"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="create_post_youtube_btn_color">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onYoutubeBtnClick:" destination="-1" eventType="touchUpInside" id="huM-NI-wG0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="88" id="HYs-ON-jYz"/>
+                                <constraint firstAttribute="width" constant="300" id="c4M-Tt-TzA"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.89750079719999998" green="0.89750079719999998" blue="0.89750079719999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="5Wo-HT-fgc" firstAttribute="leading" secondItem="b5i-wd-VIX" secondAttribute="leading" constant="10" id="77F-08-OA9"/>
+                        <constraint firstItem="nBK-N2-JY6" firstAttribute="leading" secondItem="b5i-wd-VIX" secondAttribute="leading" constant="10" id="7tt-dh-SSX"/>
+                        <constraint firstItem="tVJ-eQ-pQ2" firstAttribute="leading" secondItem="b5i-wd-VIX" secondAttribute="leading" constant="10" id="BKp-xf-gVz"/>
+                        <constraint firstItem="tVJ-eQ-pQ2" firstAttribute="top" secondItem="b5i-wd-VIX" secondAttribute="top" constant="10" id="BuD-vP-mNO"/>
+                        <constraint firstItem="BpY-47-Qot" firstAttribute="leading" secondItem="b5i-wd-VIX" secondAttribute="leading" constant="10" id="D3x-WL-9NH"/>
+                        <constraint firstItem="BpY-47-Qot" firstAttribute="top" secondItem="tVJ-eQ-pQ2" secondAttribute="bottom" constant="7" id="Dn9-FK-PHM"/>
+                        <constraint firstAttribute="bottom" secondItem="nBK-N2-JY6" secondAttribute="bottom" constant="10" id="Egp-03-z8f"/>
+                        <constraint firstAttribute="trailing" secondItem="BpY-47-Qot" secondAttribute="trailing" constant="10" id="IVq-s1-59h"/>
+                        <constraint firstItem="5Wo-HT-fgc" firstAttribute="top" secondItem="BpY-47-Qot" secondAttribute="bottom" id="MFu-mg-lSx"/>
+                        <constraint firstAttribute="trailing" secondItem="tVJ-eQ-pQ2" secondAttribute="trailing" constant="10" id="g1D-Kx-xa0"/>
+                        <constraint firstAttribute="trailing" secondItem="nBK-N2-JY6" secondAttribute="trailing" constant="10" id="lIz-jR-3pX"/>
+                        <constraint firstItem="nBK-N2-JY6" firstAttribute="top" secondItem="5Wo-HT-fgc" secondAttribute="bottom" constant="7" id="oFZ-44-ZZh"/>
+                        <constraint firstAttribute="trailing" secondItem="5Wo-HT-fgc" secondAttribute="trailing" constant="10" id="rDY-e7-U0X"/>
+                        <constraint firstItem="6ah-ZT-9GE" firstAttribute="top" secondItem="b5i-wd-VIX" secondAttribute="top" constant="10" id="rrG-yV-vwC"/>
+                        <constraint firstItem="6ah-ZT-9GE" firstAttribute="leading" secondItem="b5i-wd-VIX" secondAttribute="leading" constant="10" id="wHY-jm-tSo"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.89750079719387754" green="0.89750079719387754" blue="0.89750079719387754" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="b5i-wd-VIX" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="88x-fh-Mr9"/>
+                <constraint firstAttribute="bottom" secondItem="b5i-wd-VIX" secondAttribute="bottom" id="DPE-td-ZFv"/>
+                <constraint firstItem="b5i-wd-VIX" firstAttribute="top" secondItem="1" secondAttribute="top" id="EqD-C0-rPj"/>
+                <constraint firstAttribute="trailing" secondItem="b5i-wd-VIX" secondAttribute="trailing" id="N2p-rz-5f3"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="create_post_camera_btn_color" width="94" height="88"/>
+        <image name="create_post_photos_btn_color" width="94" height="88"/>
+        <image name="create_post_youtube_btn_color" width="94" height="88"/>
+    </resources>
+</document>
